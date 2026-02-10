@@ -1,4 +1,4 @@
-# Hanoi Tower
+# Bài toán tháp Hanoi 
 
 ## Giải thích thuật toán bài toán Hanoi Tower
 ### Quy ước
