@@ -17,7 +17,7 @@
     - Số cặp sinh con = F(n-2)
     - Mỗi cặp sinh 1 cặp mới
 
-## Các bước tính toán của Fibonaccy
+## Các cây gọi hàm của Fibonaccy
 ```
 f(5)
 ├── f(4)

@@ -24,7 +24,7 @@
 - Sau đó, cần chuyển lại (n−1) đĩa lên trên đĩa lớn nhất
     - Số bước cần: H(n−1)
 
-## Các bước tính toán của Hanoi Tower (n=3)
+## Các cây gọi hàm của Hanoi Tower (n=3)
 ```
 hanoi(3)
 ├── hanoi(2)

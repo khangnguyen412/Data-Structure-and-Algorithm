@@ -28,7 +28,7 @@
     - Không có cột nào hợp lệ
     - → quay lui (backtracking) về hàng trước
 
-## Các bước tính toán của bài toán 8 quân hậu (n=3)
+## Các cây gọi hàm của bài toán 8 quân hậu (n=3)
 ```
 tryPosition(0)
 ├── col = 0 (safe)

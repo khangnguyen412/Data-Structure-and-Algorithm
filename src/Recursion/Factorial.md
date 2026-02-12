@@ -1,6 +1,6 @@
 # Factorial (bài toán giai thừa) 
 
-## Các bước tính toán của Factorial
+## Các cây gọi hàm của Factorial
 ```
 factorial(4)
  └─ factorial(3)
