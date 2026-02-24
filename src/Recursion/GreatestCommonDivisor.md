@@ -76,5 +76,6 @@ Time Complexity: O(log(n))
 
 ## Điều kiện dừng của thuật toán
 ```
-if (r == 0) return q;
+if r == 0:
+    return q
 ```

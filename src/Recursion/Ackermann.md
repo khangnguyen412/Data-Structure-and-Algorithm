@@ -42,6 +42,6 @@ Time Complexity: O(2^n)
 
 ## Điều kiện dừng của thuật toán
 ```
-if (m == 0)
-    return n + 1;
+if (m == 0):
+    return n + 1
 ```

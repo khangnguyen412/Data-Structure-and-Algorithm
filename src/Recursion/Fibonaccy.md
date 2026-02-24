@@ -39,7 +39,6 @@ Time Complexity: O(2^n)
 
 ## Điều kiện dừng của thuật toán
 ```
-if (n <= 2) {
+if (n <= 2):
     return 1;
-}
 ```

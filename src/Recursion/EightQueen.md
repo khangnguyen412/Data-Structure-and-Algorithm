@@ -53,11 +53,9 @@ Time Complexity: O(8!)
 
 ## Điều kiện dừng của thuật toán
 ```
-if (row == 8)
-{
-    printBoard(board);
-    return;
-}
+if (row == 8):
+    printBoard(board)
+    return
 ```
 - row == 8 nghĩa là:
     - Đã đặt quân ở các hàng 0 → 7

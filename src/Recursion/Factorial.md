@@ -14,5 +14,6 @@ Time Complexity: O(n)
 
 ## Điều kiện dừng của thuật toán
 ```
-if (n == 0) return 1;
+if (n == 0) 
+    return 1;
 ```

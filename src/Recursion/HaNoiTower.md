@@ -44,7 +44,7 @@ Time Complexity: O(2^n)
 
 ## Điều kiện dừng của thuật toán
 ```
-if (n == 1) {
-    move disk from A to C;
-}
+if n == 1:
+    move disk from A to C
+    return
 ```

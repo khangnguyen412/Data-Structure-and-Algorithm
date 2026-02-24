@@ -10,12 +10,18 @@ if not exist build (
     mkdir build
 )
 
-g++ src\%1.cpp -o build\%~nx1.exe
-
-if errorlevel 1 (
-    echo Build failed
+:: Kiểm tra nếu file nguồn là Python
+if exist src\%1.py (
+    echo Running Python script: src\%1.py
+    python src\%1.py
+) else (
+    echo File not found: src\%1.py
     exit /b 1
 )
 
-echo Build success: build\%~nx1.exe
-build\%~nx1.exe
+if errorlevel 1 (
+    echo Execution failed
+    exit /b 1
+)
+
+echo Execution success
