@@ -10,4 +10,5 @@ def main():
     q = 48
     print("GDC(", p, ",", q, ") = ", GDC(p, q))
 
-main()
+if __name__ == "__main__":
+    main()

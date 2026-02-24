@@ -26,8 +26,8 @@ DSA/
  ┣ build
  ┃ ┗ HelloWorld.exe
  ┣ src
- ┃ ┣ HelloWorld.cpp
- ┃ ┗ Recursion.cpp
+ ┃ ┣ HelloWorld.py
+ ┃ ┗ Recursion.py
  ┣ README.md
  ┗ run.bat
 ```

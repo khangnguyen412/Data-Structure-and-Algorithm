@@ -8,4 +8,5 @@ def main():
     n = 5
     print("Factorial of ", n, " is: ", factorial(n))
 
-main()
+if __name__ == "__main__":
+    main()

@@ -14,4 +14,10 @@ def HaNoiTower(n, from_peg, to_peg, aux_peg):
     # Step 3: move n-1 disks to destination peg
     HaNoiTower(n - 1, aux_peg, to_peg, from_peg)
 
-HaNoiTower(3, 'A', 'C', 'B')
+def main():
+    n = 3
+    print("Hanoi Tower with ", n, " disks:")
+    HaNoiTower(n, 'A', 'C', 'B')
+
+if __name__ == "__main__":
+    main()

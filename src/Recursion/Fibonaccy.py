@@ -8,4 +8,5 @@ def main():
     n = 8
     print("Fibonaccy of ", n, " is: ", fibonaccy(n))
 
-main()
+if __name__ == "__main__":
+    main()
