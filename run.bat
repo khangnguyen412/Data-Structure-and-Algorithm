@@ -23,5 +23,3 @@ if errorlevel 1 (
     echo Execution failed
     exit /b 1
 )
-
-echo Execution success
