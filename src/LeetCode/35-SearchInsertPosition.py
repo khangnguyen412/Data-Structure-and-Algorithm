@@ -12,8 +12,8 @@ class Solution(object):
 
 def main():
     sol = Solution()
-    print("show:", sol.searchInsert([1,3,5,6], 5)) # 2
-    print("show:", sol.searchInsert([1,3,5,6], 2)) # 1
+    print("result:", sol.searchInsert([1,3,5,6], 5)) # 2
+    print("result:", sol.searchInsert([1,3,5,6], 2)) # 1
 
 if __name__ == "__main__":
     main()

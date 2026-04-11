@@ -10,7 +10,7 @@ class Solution(object):
 
 def main():
     sol = Solution()
-    print("show:", sol.strStr("xadbutsad", "sad"))
+    print("result:", sol.strStr("xadbutsad", "sad"))
 
 if __name__ == "__main__":
     main()
