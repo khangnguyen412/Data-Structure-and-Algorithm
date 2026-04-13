@@ -43,5 +43,5 @@ Output: 1
 4. Nếu vòng lặp kết thúc (chuỗi chỉ có một từ), trả về `length_of_last_word`.
 
 ## Độ phức tạp của thuật toán
-- Time Complexity: 
-- Space Complexity: 
+- Time Complexity: **O(n)** – với n là độ dài chuỗi `s`, vì `strip()` và vòng lặp đều duyệt qua chuỗi.
+- Space Complexity: **O(n)** – do `strip()` tạo ra một chuỗi mới (bản sao) trong bộ nhớ, nên tốn thêm bộ nhớ tuyến tính.
