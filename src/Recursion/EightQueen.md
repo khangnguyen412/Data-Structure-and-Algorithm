@@ -27,6 +27,7 @@
 - Nếu ở một hàng nào đó:
     - Không có cột nào hợp lệ
     - → quay lui (backtracking) về hàng trước
+- **Có nghĩa là:** vòng lặp for chạy vào trong (qua cột cuối cùng) hết được (không có cột nào hợp lệ) thì sẽ thông qua **return False** của **try_position()** và nhảy ngược lại ra ngoài (quay lại hàng trên) và thử lại với cột khác, lặp lại cho đến khi đặt được 8 quân hậu
 
 ## Các cây gọi hàm của bài toán 8 quân hậu (n=3)
 ```

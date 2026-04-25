@@ -1,64 +1,76 @@
-board = [0] * 8  # board[row] = col
+class Solution:
+    board = [0] * 8
 
-def print_board(arr):
-    print("  0 1 2 3 4 5 6 7")
-    for row in range(8):
-        print(row, end=" ")
+    # Print the board
+    def print_board(self, arr):
+        print("  0 1 2 3 4 5 6 7")
+        for row in range(8):
+            print(row, end=" ")
+            for col in range(8):
+                if arr[row] == col:
+                    print("Q", end=" ")
+                else:
+                    print(".", end=" ")
+            print(arr[row])
+        print("-------------------")
+
+    # Check if a queen can be placed at (row, col)
+    def is_safe(self, row, col):
+        for i in range(row):
+            # Same column
+            if self.board[i] == col:
+                return False
+            # Same diagonal
+            if abs(self.board[i] - col) == row - i:
+                return False
+        return True
+
+    # Search for all solutions
+    def try_position(self, row):
+        # If all queens are placed
+        if row == 8:
+            arr = [0] * 8
+            for i in range(8):
+                arr[i] = self.board[i]
+            print(arr, end="\n")
+            for i in range(8):
+                arr[i] = self.board[i]
+            self.print_board(arr)
+            return True
+
+        # Try all columns in the current row
         for col in range(8):
-            if arr[row] == col:
-                print("Q", end=" ")
-            else:
-                print(".", end=" ")
-        print(arr[row])
-    print("-------------------")
+            if self.is_safe(row, col):
+                self.board[row] = col
+                self.try_position(row + 1)
+        return False
 
-def is_safe(row, col):
-    for i in range(row):
-        # cùng cột
-        if board[i] == col:
-            return False
-        
-        # cùng đường chéo
-        if abs(board[i] - col) == row - i:
-            return False
-    return True
+    # Search for the first solution only
+    def try_position_first(self, row):
+        # If all queens are placed
+        if row == 8:
+            arr = [0] * 8
+            for i in range(8):
+                arr[i] = self.board[i]
+            print(arr, end="\n")
+            for i in range(8):
+                arr[i] = self.board[i]
+            self.print_board(arr)
+            return True
 
-def try_position(row):
-    if row == 8:  # đã đặt đủ 8 quân hậu
-        arr = [0] * 9
-        print("result: ", end="")
-        for i in range(8):
-            print(board[i], end=" ")
-        print()
-        for i in range(8):
-            arr[i] = board[i]
-        print_board(arr)
-        return  # tìm thấy nghiệm
-    
-    for col in range(8):
-        if is_safe(row, col):
-            board[row] = col
-            try_position(row + 1)  # thử hàng tiếp theo
+        # Try all columns in the current row
+        for col in range(8):
+            if self.is_safe(row, col):
+                self.board[row] = col
+                if self.try_position_first(row + 1):
+                    return True  # If find one solution, return True, stop search
+        return False
 
-# Phiên bản tìm nghiệm đầu tiên (đã comment trong code C++)
-# def try_position_first(row):
-#     if row == 8:  # đã đặt đủ 8 quân hậu
-#         arr = [0] * 9
-#         print("result: ", end="")
-#         for i in range(8):
-#             print(board[i], end=" ")
-#         print()
-#         for i in range(8):
-#             arr[i] = board[i]
-#         print_board(arr)
-#         return True  # tìm thấy nghiệm
-    
-#     for col in range(8):
-#         if is_safe(row, col):
-#             board[row] = col
-#             if try_position_first(row + 1):
-#                 return True  # truyền thành công lên trên
-#     return False  # không tìm thấy vị trí hợp lệ cho hàng này
+
+def main():
+    sol = Solution()
+    print("result: ", sol.try_position_first(0))
+
 
 if __name__ == "__main__":
-    try_position(0)  # bắt đầu từ hàng 0
+    main()
