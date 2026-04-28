@@ -19,6 +19,7 @@
         - Kiểm tra có an toàn với các quân đã đặt trước đó hay không (isSafe)
         - Nếu an toàn → đặt quân và thử hàng tiếp theo
 - Bài toán được chia theo từng hàng, mỗi hàng là một mức đệ quy
+
 ### Ý tưởng đệ quy + backtracking
 - tryPosition(row):
     - Nhiệm vụ: đặt quân hậu cho hàng row
@@ -28,6 +29,17 @@
     - Không có cột nào hợp lệ
     - → quay lui (backtracking) về hàng trước
 - **Có nghĩa là:** vòng lặp for chạy vào trong (qua cột cuối cùng) hết được (không có cột nào hợp lệ) thì sẽ thông qua **return False** của **try_position()** và nhảy ngược lại ra ngoài (quay lại hàng trên) và thử lại với cột khác, lặp lại cho đến khi đặt được 8 quân hậu
+
+### Điều kiện dừng của thuật toán
+```
+if (row == 8):
+    printBoard(board)
+    return
+```
+- row == 8 nghĩa là:
+    - Đã đặt quân ở các hàng 0 → 7
+    - Đủ 8 quân hậu
+- Đây là điều kiện thành công duy nhất
 
 ## Các cây gọi hàm của bài toán 8 quân hậu (n=3)
 ```
@@ -52,13 +64,3 @@ tryPosition(0)
 ## Độ phức tạp của thuật toán
 Time Complexity: O(8!)
 
-## Điều kiện dừng của thuật toán
-```
-if (row == 8):
-    printBoard(board)
-    return
-```
-- row == 8 nghĩa là:
-    - Đã đặt quân ở các hàng 0 → 7
-    - Đủ 8 quân hậu
-- Đây là điều kiện thành công duy nhất

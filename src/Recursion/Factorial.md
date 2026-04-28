@@ -1,5 +1,11 @@
 # Factorial (bài toán giai thừa) 
 
+## Điều kiện dừng của thuật toán
+```
+if (n == 0) 
+    return 1;
+```
+
 ## Các cây gọi hàm của Factorial
 ```
 factorial(4)
@@ -12,8 +18,3 @@ factorial(4)
 ## Độ phức tạp của thuật toán
 Time Complexity: O(n)
 
-## Điều kiện dừng của thuật toán
-```
-if (n == 0) 
-    return 1;
-```

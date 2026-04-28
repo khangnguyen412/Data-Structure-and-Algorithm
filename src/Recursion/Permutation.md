@@ -1,7 +1,6 @@
 # Bài toán hoán vị
 
 ## Giải thích thuật toán bài toán hoán vị
-
 ### Quy ước
 - Cho dãy a gồm n phần tử
 - Mỗi hoán vị là một cách sắp xếp lại toàn bộ n phần tử
@@ -19,6 +18,14 @@
     - Đánh dấu đã dùng
     - Gọi đệ quy cho vị trí k+1
     - Sau khi quay lui → bỏ đánh dấu
+
+### Điều kiện dừng của thuật toán
+```
+if (k == n):
+    print(temp_array)
+    return
+```
+
 ## Các cây gọi hàm của bài toán hoán vị
 ```
 Permutation(0)
@@ -44,10 +51,3 @@ Time Complexity: O(n × n!)
 
 ## Phương trình
 T(n) = n * T(n-1) + O(n)
-
-## Điều kiện dừng của thuật toán
-```
-if (k == n):
-    print(temp_array)
-    return
-```

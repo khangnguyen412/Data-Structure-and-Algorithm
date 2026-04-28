@@ -20,12 +20,19 @@
 ```
 C(n, k) = C(n-1, k-1) + C(n-1, k)
 ```
+
 ### Ý tưởng đệ quy
 - Chia bài toán lớn thành các bài toán con nhỏ hơn.
 - Sử dụng công thức Pascal để phân rã cho đến khi gặp trường hợp cơ sở.
 Trường hợp cơ sở:
 - k=0: không chọn phần tử nào → chỉ có 1 cách.
 - k=n: chọn tất cả phần tử → chỉ có 1 cách.
+
+### Điều kiện dừng của thuật toán
+```
+if k == 0 or k == n:
+    return 1
+```
 
 ## Các cây gọi hàm của bài toán Tổ hợp nhị phân
 ```
@@ -44,9 +51,3 @@ C(4,2)
 
 ## Độ phức tạp của thuật toán
 Time Complexity: O(2^n)
-
-## Điều kiện dừng của thuật toán
-```
-if k == 0 or k == n:
-    return 1
-```

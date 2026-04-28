@@ -35,6 +35,7 @@
 - Ký hiệu: gcd(a, b) hoặc (a, b)
 - Tính chất: gcd(a, b) = gcd(b, a) (tính giao hoán)
 - Ví dụ: gcd(12, 18) = 6, gcd(8, 9) = 1
+
 ### Phân tích bài toán GCD
 - Định nghĩa toán học:
     - gcd(a, b) = max{ d ∈ ℕ⁺ : d | a và d | b }
@@ -44,11 +45,18 @@
     - gcd(a, b) = gcd(b, a mod b) - Cơ sở của thuật toán Euclid
     - gcd(ka, kb) = k·gcd(a, b)
     - Nếu gcd(a, b) = 1 thì a, b là nguyên tố cùng nhau
+
 ### Ý tưởng đệ quy
 ```
 gcd(p, q) = 
     - q, nếu p % q = 0
     - gcd(q, p % q), nếu p % q ≠ 0
+```
+
+### Điều kiện dừng của thuật toán
+```
+if r == 0:
+    return q
 ```
 
 ## Các cây gọi hàm của bài toán GCD
@@ -73,9 +81,3 @@ gcd(48, 18)
 
 ## Độ phức tạp của thuật toán
 Time Complexity: O(log(n))
-
-## Điều kiện dừng của thuật toán
-```
-if r == 0:
-    return q
-```

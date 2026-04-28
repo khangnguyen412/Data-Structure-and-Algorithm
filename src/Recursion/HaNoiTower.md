@@ -11,6 +11,7 @@
     - Mỗi lần chỉ chuyển 1 đĩa
     - Không đặt đĩa lớn lên đĩa nhỏ
     - Được dùng 1 cọc trung gian
+
 ### Phân tích bài toán với n đĩa
 - Với n đĩa, ta chia thành 2 nhóm:
 - Nhóm 1: (n−1) đĩa phía trên
@@ -23,6 +24,13 @@
     - Số bước: 1
 - Sau đó, cần chuyển lại (n−1) đĩa lên trên đĩa lớn nhất
     - Số bước cần: H(n−1)
+
+### Điều kiện dừng của thuật toán
+```
+if n == 1:
+    move disk from A to C
+    return
+```
 
 ## Các cây gọi hàm của Hanoi Tower (n=3)
 ```
@@ -42,9 +50,3 @@ hanoi(3)
 ## Độ phức tạp của thuật toán
 Time Complexity: O(2^n)
 
-## Điều kiện dừng của thuật toán
-```
-if n == 1:
-    move disk from A to C
-    return
-```
