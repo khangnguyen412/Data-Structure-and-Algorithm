@@ -3,16 +3,16 @@
     - C(n, n) = 1
     - C(n, 0) = 1
     - C(n, k) = C(n-1, k-1) + C(n-1, k) nếu 0 < k < n
-- Viết một thủ tục đệ qui thực hiện tính giá trị C(n,k) khi biết n, k.
+- Viết một thủ tục đệ qui thực hiện tính giá trị C( n , k ) khi biết n, k.
 
 ## Giải thích thuật toán bài toán Tổ hợp nhị phân
 ### Quy ước
 - n: số phần tử của tập hợp.
 - k: số phần tử được chọn từ n phần tử (không quan tâm thứ tự).
-- Kết quả 𝐶 ( 𝑛 , 𝑘 ) C(n,k) là số tổ hợp chập 𝑘 k của 𝑛 n.
+- Kết quả 𝐶 ( 𝑛 , 𝑘 ) C( n , k ) là số tổ hợp chập 𝑘 k của 𝑛 n.
 
 ### Phân tích bài toán Tổ hợp nhị phân
-- Bài toán yêu cầu tính hệ số nhị phân 𝐶 ( 𝑛 , 𝑘 ) C(n,k) dựa trên công thức đệ quy. 
+- Bài toán yêu cầu tính hệ số nhị phân 𝐶 ( 𝑛 , 𝑘 ) C( n , k ) dựa trên công thức đệ quy. 
 - Đây là một bài toán kinh điển trong toán học tổ hợp và khoa học máy tính. 
 - Công thức đệ quy dựa trên tính chất: chọn 𝑘 k phần tử từ 𝑛 n phần tử có thể phân làm 2 trường hợp: 
     - Phần tử đầu tiên được chọn → còn chọn 𝑘 − 1 k−1 từ 𝑛 − 1 n−1 phần tử còn lại. 
