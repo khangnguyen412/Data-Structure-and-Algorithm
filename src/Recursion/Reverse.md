@@ -8,15 +8,22 @@
 - Hàm không trả về chuỗi đảo mà in trực tiếp ra màn hình
 
 ### Phân tích bài toán với n đĩa
-- Giả sử chuỗi có độ dài n.
+Công thức đệ quy:
 ```
-reverse(n[1:])
+reverse(s) = reverse(i+1) + s[i]
 ```
-## Phương trình truy hồi
+Nghĩa là: đảo chuỗi con bắt đầu từ ký tự thứ 2 đến hết, rồi nối ký tự đầu tiên vào cuối.
+
+Điều kiện dừng (base case):
+Nếu chuỗi có độ dài <= 1 thì trả về chính nó (không cần đảo).
+
+### Điều kiện dừng của thuật toán
 ```
-T(n)=T(n−1)+O(1)
+if index == len(string):
+    return ""
 ```
-## Các cây gọi hàm của Reverse (n=3)
+
+### Các cây gọi hàm của Reverse (n=3)
 ```
 reverse("ABC")
  └── reverse("BC")
@@ -24,11 +31,10 @@ reverse("ABC")
            └── reverse("")
 ```
 
+## Phương trình truy hồi
+```
+T(n)=T(n−1)+O(1)
+```
+
 ## Độ phức tạp của thuật toán
 Time Complexity: O(n)
-
-## Điều kiện dừng của thuật toán
-```
-if n == "":
-    return ""
-```
