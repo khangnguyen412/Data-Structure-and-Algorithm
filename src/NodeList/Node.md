@@ -23,7 +23,7 @@ class ListNode:
         self.next = next
 ```
 
-### Tree List
+### Binary Tree
 ```python
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
