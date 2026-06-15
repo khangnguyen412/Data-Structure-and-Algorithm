@@ -34,11 +34,21 @@ class Solution:
         return res
 
     # Thêm vào đầu node
-    def insertToHeadListNode(self, data):
-        newNode = ListNode(data) # Tạo node
-        newNode.next = self.head # Trỏ next của node tới node cũ
-        self.head = newNode
+    def insertToHead(self, data):
+        new_node = ListNode(data) # Tạo node
+        new_node.next = self.head # Trỏ next của node tới node cũ
+        self.head = new_node
 
+    def insertToLast(self, data):
+        new_node = ListNode(data)
+
+        if self.head is None:
+            self.head = new_node
+        
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = new_node
 
 if __name__ == "__main__":
     sol = Solution()
@@ -47,5 +57,8 @@ if __name__ == "__main__":
     sol.head = sol.convertToListNode(nums)
     print("Danh sách ban đầu:", sol.convertFromListNode())
 
-    sol.insertToHeadListNode(0)
+    sol.insertToHead(0)
     print ("Sau khi thêm số 0 vào đầu: ", sol.convertFromListNode())
+
+    sol.insertToLast(4)
+    print ("Sau khi thêm số 4 vào cuối: ", sol.convertFromListNode())
