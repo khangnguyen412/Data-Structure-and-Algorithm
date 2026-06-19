@@ -5,7 +5,10 @@ class ListNode:
 
 
 class Solution:
-    def convertToListNode(self, arr=None):
+    def __init__(self):
+        self.head: ListNode | None = None
+
+    def convert_to_node(self, arr=None):
         if arr is None:
             arr = []
         if not arr:
@@ -17,8 +20,8 @@ class Solution:
             cur = cur.next  # Dời cur sang node vừa tạo
         return dummy.next  # Bỏ dummy, trả về node thật đầu tiên
 
-    def convertFromListNode(self, head: ListNode):
-        res, cur = [], head  # res chứa kết quả, cur bắt đầu từ head
+    def convert_from_node(self):
+        res, cur = [], self.head  # res chứa kết quả, cur bắt đầu từ head
         while cur:  # Dừng khi cur == None
             res.append(cur.val)  # Lấy giá trị
             cur = cur.next  # Nhảy sang node kế tiếp
@@ -29,10 +32,8 @@ def main():
     sol = Solution()
     nums = [1, 2, 3, 4, 5]
 
-    head = sol.convertToListNode(nums)
-    reversed_head = sol.convertFromListNode(head)
-
-    print(reversed_head)  # [1, 2, 3, 4, 5]
+    sol.head = sol.convert_to_node(nums)
+    print(f"Chuyển node thành mãng: {sol.convert_from_node()}")  # [1, 2, 3, 4, 5]
 
 
 if __name__ == "__main__":

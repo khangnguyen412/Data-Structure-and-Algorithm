@@ -6,7 +6,7 @@ class ListNode:
 
 class Solution:
     def __init__(self):
-        self.head = None
+        self.head: ListNode = None
 
     def convert_to_node(self, arr=None):
         if arr is None:
@@ -27,19 +27,19 @@ class Solution:
             cur = cur.next
         return res
 
-    def remove_from_node_with_target(self, val):
-        cur = self.head
+    def remove_from_position(self, val):
         prev = None
         found = False
+        cur = self.head
         while cur:
             if cur.val == val:
-                prev.next = cur.next
-                found = True
+                prev.next = cur.next  # cắt bỏ node hiện tại, nối prev với node tiếp theo
+                found = True  # set đã tìm thấy node
                 break
-            prev = cur
-            cur = cur.next
+            prev = cur  # set node hiện tại thành node cũ trước khi nãy sang node
+            cur = cur.next  # nhảy node
         if found == False:
-            print("couldn't found")
+            print(f"không thấy node có giá trị {val}")
 
 
 if __name__ == "__main__":
@@ -47,7 +47,7 @@ if __name__ == "__main__":
     nums = [1, 2, 4, 3]
 
     sol.head = sol.convert_to_node(nums)
-    print("Danh sách ban đầu:", sol.convert_from_node())
+    print(f"Danh sách ban đầu: {sol.convert_from_node()}")
 
-    sol.remove_from_node_with_target(5)
-    print("Danh sách sau xoá:", sol.convert_from_node())
+    sol.remove_from_position(4)
+    print(f"Danh sách sau khi xoá node 4: {sol.convert_from_node()}")

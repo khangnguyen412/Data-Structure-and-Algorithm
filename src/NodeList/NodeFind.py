@@ -5,7 +5,10 @@ class ListNode:
 
 
 class Solution:
-    def convertToNode(self, arr):
+    def __init__(self):
+        self.head: ListNode | None = None
+
+    def convert_to_node(self, arr):
         if arr is None:
             return
         if not arr:
@@ -17,8 +20,8 @@ class Solution:
             cur = cur.next
         return dummy.next
 
-    def find_node(self, target=int, head=ListNode):
-        cur = head
+    def find_node(self, target=int):
+        cur = self.head
         while cur:
             if cur.val == target:
                 return cur.val
@@ -26,8 +29,8 @@ class Solution:
 
 
 if __name__ == "__main__":
-    arr = [1, 2, 3]
-    List = ListNode()
     sol = Solution()
-    head = sol.convertToNode(arr)
-    print(sol.find_node(2, head))
+    arr = [1, 2, 3]
+
+    sol.head = sol.convert_to_node(arr)    
+    print(f"Giá trị được tìm thấy tại: {sol.find_node(2)}")

@@ -3,15 +3,12 @@ class ListNode:
         self.val = val
         self.next = next
 
-    def __repr__(self):
-        return f"ListNode({self.val})"
-    
-    def __str__(self):
-        return str(self.val)
-
 
 class Solution:
-    def convertToListNode(self, arr=None):
+    def __init__(self):
+        self.head: ListNode | None = None
+
+    def convert_to_node(self, arr=None):
         if arr is None:
             arr = []
         if not arr:
@@ -23,21 +20,16 @@ class Solution:
             cur = cur.next
         return dummy.next
 
-    def printListNode(self, head: ListNode):
-        cur = head
+    def print_list_node(self):
+        cur = self.head
         while cur:
-            next_val = cur.next.val if cur.next else None
-            print(f"Value: {cur.val} | Next: {next_val}")
+            print(f"Giá trị của node hiện tại: {cur.val}")
             cur = cur.next
 
 
-def main():
+if __name__ == "__main__":
     sol = Solution()
     nums = [1, 2, 3, 4, 5]
 
-    head = sol.convertToListNode(nums)
-    sol.printListNode(head)
-
-
-if __name__ == "__main__":
-    main()
+    sol.head = sol.convert_to_node(nums)    
+    sol.print_list_node()

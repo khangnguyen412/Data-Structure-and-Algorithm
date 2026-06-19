@@ -11,10 +11,6 @@ class TreeNode:
         self.right = right
 
 
-def main():
+if __name__ == "__main__":
     List = ListNode()
     Tree = TreeNode()
-
-
-if __name__ == "__main__":
-    main()
